@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<link rel="stylesheet" href="style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOOGIE PRUEBA</title>
+  <!-- FontAwesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <header>
+    <!-- Parte de la Izquierda -->
+    <div class="menu">
+  <button class="btn-cita" id="menuBtn">☰</button>
+  <div class="dropdown" id="dropdownMenu">
+    <a href="#">Menu</a>
+    <a href="#">Compras</a>
+    <a href="#">Personal</a>
+  </div>
+</div>
+    <!-- Logo enn el centro -->
+    <img src="LOGO.png" alt="Logo" height="100">
+    <!-- Parte de la Derecha -->
+    <!-- Botón de la derecha -->
+    <button class="btn-cita" id="btnAgendar">Agendar cita</button>
+
+    <!-- Ventana emergente -->
+<div class="overlay" id="overlay">
+  <div class="popup">
+    <h2>Agendar cita</h2>
+
+    <form id="formCita">
+      <label>Nombre completo:</label><br>
+      <input type="text" name="nombre" required><br><br>
+
+      <label>Número de teléfono:</label><br>
+      <input type="tel" name="telefono" required><br><br>
+
+      <label>Nombre del perrito:</label><br>
+      <input type="text" name="perrito" required><br><br>
+
+      <label>¿Para qué perrito sería el servicio?</label><br>
+      <input type="text" name="para_quien" required><br><br>
+
+      <label>¿Está acostumbrado a este tipo de servicio?</label><br>
+      <input type="radio" name="acostumbrado" value="si"> Sí
+      <input type="radio" name="acostumbrado" value="no"> No
+      <input type="radio" name="acostumbrado" value="primera vez"> Primera vez<br><br>
+
+      <label>¿Qué servicio desea?</label><br>
+      <select name="servicio" required>
+        <option value="">Seleccione</option>
+        <option value="baño">Baño</option>
+        <option value="corte">Corte</option>
+        <option value="baño y corte">Baño y Corte</option>
+        <option value="otro">Otro</option>
+      </select><br><br>
+
+      <label>¿Hace cuánto tiempo recibió una pastilla antipulgas?</label><br>
+      <input type="text" name="antipulgas"><br><br>
+
+      <label>¿Actualmente tiene nudos o el pelo muy enredado?</label><br>
+      <input type="radio" name="nudos" value="si"> Sí
+      <input type="radio" name="nudos" value="no"> No<br><br>
+
+      <label>¿Presenta pulgas o garrapatas?</label><br>
+      <input type="radio" name="pulgas" value="si"> Sí
+      <input type="radio" name="pulgas" value="no"> No<br><br>
+
+
+      <button type="submit">Confirmar</button>
+      <br><br>
+      <button type="button" onclick="cerrarEncuesta()">Cerrar</button>
+    </form>
+  </div>
+</div>
+
+
+  </header>
+  <section class="carrusel">
+    <div class="carrusel-container">
+      <div class="carrusel-slide"><img src="IMG1.jpg" alt="Foto 1"></div>
+      <div class="carrusel-slide"><img src="IMG2.jpg" alt="Foto 2"></div>
+      <div class="carrusel-slide"><img src="IMG3.jpg" alt="Foto 3"></div>
+      <div class="carrusel-slide"><img src="IMG4.jpg" alt="Foto 4"></div>
+      <div class="carrusel-slide"><img src="IMG5.jpg" alt="Foto 5"></div>
+      <div class="carrusel-slide"><img src="IMG6.jpg" alt="Foto 6"></div>
+    </div>
+  
+    <!-- Botones -->
+    <button class="carrusel-btn prev">❮</button>
+    <button class="carrusel-btn next">❯</button>
+  </section>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js'></script><script  src="main.js"></script>
+
+ 
+  
+
+</body>
+<!-- Footer -->
+<footer class="footer">
+  <!-- Logo -->
+  <div class="footer-section">
+    <img src="LOGO.png" alt="DOOGIE" class="footer-logo">
+
+  </div>
+
+  <!-- Contacto -->
+  <div class="footer-section">
+    <p>Contáctanos en:</p>
+    <a href="https://wa.me/528131314975" target="_blank">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </a>
+    <br>
+    <a href="https://maps.app.goo.gl/yB6CAQffN5DGsGhG8" target="_blank">
+      <i class="fas fa-map-marker-alt"></i> Ubicación
+    </a>
+  </div>
+
+  <!-- Redes Sociales -->
+  <div class="footer-section">
+    <p>Síguenos en:</p>
+    <a href="https://www.instagram.com/doogieesteticacanina?igsh=MXNyajhxdXZmNWtkeQ==" target="_blank">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com/share/19mmBVqF6r/" target="_blank">
+      <i class="fab fa-facebook"></i>
+    </a>
+  </div>
+</footer>
+
+
+</html>
