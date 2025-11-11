@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maltés - Catálogo</title>
+
+  <link rel="stylesheet" href="catalogo.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <header class="header-catalogo">
+    <a href="index.html" class="btn-volver"><i class="fas fa-arrow-left"></i> Volver</a>
+    <h1>Maltés</h1>
+  </header>
+
+  <!-- ✅ Se usa galeria-servicios -->
+  <section class="galeria-servicios">
+    <div class="fila">
+      <div class="item">
+        <img src="Maltés/Maltés2.jpg" alt="Corte 10mm" onclick="expandir(this)">
+        <p> Corte<br>10 mm</p>
+      </div>
+
+
+
+
+    </div>
+  </section>
+
+  <!-- ✅ Texto corregido -->
+  <div class="descripcion-centro">
+    Descubre nuestros servicios de corte de pelo para perritos. Contamos con cortes
+    de distintas medidas y estilos para que tu mascota luzca increíble.
+    ¡Haz que se sienta como en casa!
+  </div>
+
+  <section class="galeria-servicios">
+    <div class="fila">
+      <div class="item">
+        <img src="Maltés/Maltés1.jpg" alt="Corte 10mm" onclick="expandir(this)">
+        <p> Corte<br>10 mm</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ✅ Solo queda un modal -->
+  <div id="modal" class="modal" onclick="cerrarModal()">
+    <span class="cerrar">&times;</span>
+    <img id="modal-img" class="modal-contenido">
+  </div>
+
+  <script src="catalogo.js"></script>
+</body>
+
+
+
+<!-- Footer -->
+<footer class="footer">
+  <!-- Contenido principal -->
+  <div class="footer-content">
+    <!-- Logo -->
+    <div class="footer-section">
+      <img src="LOGO.png" alt="DOOGIE" class="footer-logo">
+    </div>
+
+    <!-- Contacto -->
+    <div class="footer-section">
+      <p>Contáctanos en:</p>
+      <a href="https://wa.me/528131314975" target="_blank">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <br>
+      <a href="https://maps.app.goo.gl/yB6CAQffN5DGsGhG8" target="_blank">
+        <i class="fas fa-map-marker-alt"></i> Ubicación
+      </a>
+    </div>
+
+    <!-- Redes Sociales -->
+    <div class="footer-section">
+      <p>Síguenos en:</p>
+      <a href="https://www.instagram.com/doogieesteticacanina?igsh=MXNyajhxdXZmNWtkeQ==" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/share/19mmBVqF6r/" target="_blank">
+        <i class="fab fa-facebook"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Línea inferior -->
+  <div class="footer-bottom">
+    <p>© 2025 Doogie Estética Canina | Todos los derechos reservados</p>
+    <p>
+      Desarrollado por: Josias Gamez Urrea · Vanessa Rodriguez Garcia · Milca Lisbeth Hernández Hernández · 
+      Mario Francisco Villafranco Colunga · Jair Alejandro Calderon Maldonado · Rolando Martínez Delgado · 
+      José Aldo Orta Solís · Guillermo Andres Fortanelly Palomares · Jose Luis Ibarra Rodriguez
+    </p>
+  </div>
+</footer>
+
+<style>
+/* ===================
+   FOOTER ESTILO FINAL RESPONSIVO
+=================== */
+.footer {
+  background: #fff;
+  color: #000;
+  font-family: Arial, sans-serif;
+  border-top: 2px solid #eee;
+  text-align: center;
+}
+
+/* Contenido principal */
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px 40px;
+  flex-wrap: wrap;
+  gap: 450px; 
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
+
+/* ======== LOGO ======== */
+.footer-logo {
+  width: 180px;
+  height: auto;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.footer-logo:hover {
+  transform: scale(1.05);
+}
+
+/* ======== ENLACES E ICONOS ======== */
+.footer a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.footer a i {
+  font-size: 32px;
+  vertical-align: middle;
+}
+
+.footer a:hover {
+  color: #d95c96;
+  transform: scale(1.1);
+}
+
+/* ======== FRANJA INFERIOR ======== */
+.footer-bottom {
+  background-color: #f8f8f8;
+  border-top: 1px solid #ccc;
+  padding: 15px 25px;
+  font-size: 14px;
+}
+
+.footer-bottom p {
+  margin: 4px 0;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* ======== RESPONSIVO PARA TABLET ======== */
+@media (max-width: 992px) {
+  .footer-content {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 25px;
+  }
+
+  .footer-logo {
+    width: 160px;
+  }
+
+  .footer a i {
+    font-size: 28px;
+  }
+}
+
+/* ======== RESPONSIVO PARA CELULAR ======== */
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 20px;
+  }
+
+  .footer-logo {
+    width: 150px;
+  }
+
+  .footer a i {
+    font-size: 26px;
+  }
+
+  .footer-bottom {
+    font-size: 12.5px;
+    padding: 12px 10px;
+  }
+}
+</style>
+
+</html>
